@@ -1,0 +1,79 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+}
+.main{
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  gap: 32px;
+}
+
+.addTodo{
+  display: flex;
+  gap: 8px;
+  border: 1px solid #3b3b3b;
+  border-radius: 4px;
+  padding: 8px;
+}
+.addTodoInput{
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.todoColOuter{
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+.todoCol{
+  border: 1px solid #555555;
+  background: #3b3b3b;
+  padding: 16px;
+  border-radius: 4px;
+  width: 100%;
+  overflow: hidden;
+  min-height: calc(100vh - 200px);
+}
+.todoCol h3{
+  border-bottom: 1px solid  #555555;
+  padding-bottom: 8px;
+}
+.todoColInner{
+  min-height:100%;
+}
+
+.card {
+  padding: 16px;
+  background: #000000;
+  border-radius: 4px;
+  cursor: grab;
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+.deleteBtn{
+  margin-left: auto;
+  cursor: pointer;
+}
+.cardTitle{
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 600px) {
+  #root{
+    padding: 0.5rem;
+  }
+  .todoColOuter{
+    flex-direction: column;
+  }
+  .todoCol{
+    width: 100%;
+    min-height: auto;
+  }
+}
